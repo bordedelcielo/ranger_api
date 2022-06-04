@@ -5,25 +5,25 @@ const getData = async () => {
     return response.data
 }
 
-// // create Constants to hold DOM Elements
-// const DOM_Elements = {
-//     ranger_list: '.ranger-list',
-// }
+// create Constants to hold DOM Elements
+const DOM_Elements = {
+    ranger_list: '.ranger-list',
+}
 
-// // Creation of the Ranger List HTML
-// const create_list = ( id, name ) => {
-//     const html = `<a href ="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}"> ${name} </a>`;
-//     document.querySelector(DOM_Elements.ranger_list).insertAdjacentHTML('beforeend', html)
-// }
+// Creation of the Ranger List HTML
+const create_list = ( id, name ) => {
+    const html = `<a href ="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}"> ${name} </a>`;
+    document.querySelector(DOM_Elements.ranger_list).insertAdjacentHTML('beforeend', html)
+}
 
-// // Function to Load Data and display HTML 
+// Function to Load Data and display HTML 
 
-// const load_data = async () => {
-//     const rangers = await getData();
+const load_data = async () => {
+    const rangers = await getData();
 
-//     rangers.forEach( element => create_list(element.id, element.name))
-// }
+    rangers.forEach( element => create_list(element.id, element.name))
+}
 
-// const clear_data = () => {
-//     document.querySelector(DOM_Elements.ranger_list).innerHTML = '';
-// }
+const clear_data = () => {
+    document.querySelector(DOM_Elements.ranger_list).innerHTML = '';
+}
